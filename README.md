@@ -79,7 +79,7 @@ RandomForest é amplamente utilizado por sua simplicidade e poder de generaliza�
 <details>
   <summary>Validação Cruzada</summary>
 
-A validação cruzada é uma técnica de avaliação de modelos em Machine Leaming que é essencial paraassegurar a robustez e a generalização do modelo.
+A validação cruzada é uma técnica de avaliação de modelos em Machine Learning que é essencial para assegurar a robustez e a generalização do modelo.
 
 Destacamos a seguir alguns motivos pelos quais a validação cruzada é importante:
 
