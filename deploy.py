@@ -11,8 +11,8 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Carregar o modelo e o scaler
-modelo_dsa = joblib.load('dsa_modelo_final.pkl')
-scaler = joblib.load('dsa_padronizador.pkl')
+modelo = joblib.load('modelo_final.pkl')
+scaler = joblib.load('padronizador.pkl')
 
 # Função para pré-processar os dados de entrada
 # As colunas devem ser exatamente as mesmas usadas durante o treinamento
@@ -60,11 +60,11 @@ def preprocess_input(idade,
 
 # Função para fazer previsões
 def predict(data):
-    prediction = modelo_dsa.predict(data)
+    prediction = modelo.predict(data)
     return prediction
 
 # Interface do Streamlit
-st.title("DSA - Preditor de Churn com RandomForest")
+st.title("Preditor de Churn com RandomForest")
 
 # Criação de campos para entrada de dados
 idade = st.number_input('Idade', min_value = 18, max_value = 100, value = 30)
@@ -106,7 +106,7 @@ if st.button('Prever Churn'):
 
     st.write('Churn Previsto:' , 'Sim' if prediction[0] == 1 else 'Não')
 
-    st.write('Obrigado - Data Science Academy')
+    st.write('Obrigado')
 
 
 

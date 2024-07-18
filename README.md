@@ -103,3 +103,36 @@ O desempenho do modelo é dado pela média dos desempenhos em cada fold. Outros 
 
 ![ValidacaoCruzada](image/ValidacaoCruzada.png)
 </details>
+
+<details>
+  <summary>Otimização de Hiperparâmetros</summary>
+
+Para a validação, foram selecionados quatro hiperparâmetros:
+
+- n_estimators: Número de árvores no ensemble
+- max_depth: Profundidade máxima de cada árvore
+- min_samples_split: Número mínimo de amostras necessário para dividir um nó
+- min_samples_leaf: Número mínimo de amostras exigido em um nó folha
+
+Os valores dos hiperparâmetros foram escolhidos de maneira aleatória com o objetivo de identificar os melhores parâmetros para otimizar o desempenho do modelo.
+
+Para validar todas as combinações possíveis, utilizou-se o parâmetro GridSearchCV, que compara todas as possibilidades e informa os melhores parâmetros.
+
+![Grid](image/Grid.png)
+
+</details>
+
+<details>
+  <summary>Deploy do modelo</summary>
+
+Para executar o modelo de Machine Learning, utilize o `streamlit`. O comando a ser executado no terminal é:
+
+```
+streamlit run deploy.py
+```
+para validar insira os valores desejados:
+
+![Deploy](image/Deploy.png)
+
+
+</details>
